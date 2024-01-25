@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+  <head>
+
+    <meta charset="utf-8" />
+
+    <title> What's in the head? Metadata in HTML </title>
+    
+  </head>
+
+  <body>
+
+    <h1> What's in the head? Metadata in HTML </h1>
+
+    <p>
+      El head de HTML es la parte del documento que no se muestra al usuario. En esta parte se carga la informacion como el titulo, el autor,
+      una breve descripcion, links al CSS, etc. Los navegadores usan el head del HTML para interpretar correctamente el contenido del archivo.
+    </p>
+
+    <h2> What is the HTML head? </h2>
+
+    <p> Veamos este ejemplo: </p>
+
+    <pre>
+      <code>
+        &lt;!doctype HTML&gt;
+        &lt;html lang="en-US"&gt;
+          &lt;head&gt;
+            &lt;meta charset="utf-8" /&gt;
+
+            &lt;title&gt; Mi test page &lt;/title&gt;
+          &lt;/head&gt;
+
+          &lt;body&gt;
+            &lt;p&gt; This is my page &lt;/p&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+    </pre>
+
+    <p>
+      A diferencia del body, lo que se agrega en el head del documento no se muestra al usuario. El trabajo del head es contener metadatos
+      del documento, en el ejemplo anterior el head es muy pequeno, pero puede ser mas extenso en paginas mas grandes.
+    </p>
+
+    <h2> Addin a title </h2>
+
+    <p>
+      Ya vimos el elemento de &lt;title&gt; en accion y sabemos que este es usado para agregar un titulo a la pagina.
+      A menudo este es confundido con el elemento &lt;h&gt;, pero ambos tienen una funcion totalmente diferente.
+    </p>
+
+    <ul>
+      <li>
+        <p>
+          El elemento &lt;h1&gt; se usa para marcar el encabezado principal de la pagina, se suele usar solo uno por pagina,
+          entonces lo mas comun es que este marque el titulo principal del contenido.  
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Por otro lado el elemento &lt;title&gt; forma parte de los metadatos y representa el titulo de todo el documento
+          y no del contenido del documento. El elemento de title tambien tiene otras funciones, por ejemplo cuando queremos
+          guardar una pagina y hacemos un bookmark en la seccion del nombre recomendado nos saldra el texto que se encuentre
+          encerrado entre el elemento &lt;title&gt;.
+        </p>
+      </li>
+    </ul>
+
+    <h2> Metadata: the &lt;meta&gt; element </h2>
+
+    <p>
+      Los metadatos son datos de datos. HTML tiene su forma oficial para anadir metadatos a el documento, el cual es
+      el elemento de &lt;meta&gt;. Todo de lo que hablaremos en esta seccion son metadatos. En realidad hay una grand
+      variedad de tipos de metadatos que podemos agregar al head de nuestra pagina.
+    </p>
+
+    <h3> Specifying your document's character encoding </h3>
+
+    <p> En los ejemplos anteriores hemos visto esta linea incluida: </p>
+
+    <p> &lt;meta charset="utf-8" /gt; </p>
+
+    <p>
+      Este elemento especifica la codificacion de caracteres del documento, o sea el set de caracteres que puede usar
+      el documento. El set utf-8 incluye la gran mayoria de todos los caracteres del lenguaje humano por lo que tu pagina
+      podra contener la mayoria de lenguajes humanos.
+    </p>
+
+    <p>
+      NOTA!!: Algunos navegadores corrigen automaticamente una codificacion incorrecta pero de igual forma es mejor
+      incluirla para evitar problemas.
+    </p>
+
+    <h2> Adding an author and description </h2>
+
+    <p> Algunos elementos &lt;meta&gt; contienen los atributos de name y description: </p>
+
+    <ul>
+      <li>
+        <p> El atributo de name para especificar que tipo de informacion se contiene ahi. </p>
+      </li>
+
+      <li>
+        <p> El elemento content especifica el metacontenido real. </p>
+      </li>
+    </ul>
+
+    <p> A continuacion tenemos un ejemplo de como pueden ser usados estos dos atributos: </p>
+
+    <pre>
+      <code>
+        &lt;meta name="author" content="Chris Mills" /&gt;
+        &lt;meta
+          name="description"
+          content="The MDN Web Docs Learning Area aims to provide
+          complete beginners to the Web with all they need to know to get
+          started with developing websites and applications." /&gt;
+      </code>
+    </pre>
+
+    <p>
+      Especficar el autor del contenido tiene muchos beneficios. Un ejemplo de esto es el de un usuario que tiene dudas
+      sobre la pagina, algunos manejadores de contenido tienen funciones para extraer el autor de una pagina y asi saber
+      a quien contactar
+    </p>
+
+    <p>
+      Por otro lado tenemos la descripcion, poniendo una descripcion a nuestra pagina con una buena redaccion puede generar
+      que tu pagina aparezca mas arriba en los buscadores, a este tipo de actividades normalmente se les conoce como Search
+      Engine Optimization (SEO).
+    </p>
+
+    <h3> Other types of metadata </h3>
+
+    <p>
+      A medida que navegues por la web te iras encontrando con diferentes tipos de metadatos, algunos de estos son
+      creaciones de otras empresas para proveer metadatos mas nutridos.
+    </p>
+
+    <p>
+      Un ejemplo de esto es el <a href="https://ogp.me/">Open Grap Data</a> el cual es un protocolo de metadatos creado Por
+      Facebook dar a los sitios web metadatos mas nutridos, por ejemplo en la pagina de MDN Web Docs encontraras esto: 
+    </p>
+
+    <pre>
+      <code>
+        &lt;meta
+          property="og:image"
+          content="https://developer.mozilla.org/mdn-social-share.png" /&gt;
+        &lt;meta
+          property="og:description"
+          content="The Mozilla Developer Network (MDN) provides
+          information about Open Web technologies including HTML, CSS, and APIs for both websites
+          and HTML Apps." /&gt;
+        &lt;meta property="og:title" content="Mozilla Developer Network" /&gt;
+      </code>
+    </pre>
+
+    <p>
+      Un efecto de esto es que cuando ponemos un link en Facebook hacia MDN Web Docs el link aparecera junto con una
+      imagen y una description para una mejor experiencia del usuario.
+    </p>
+
+    <img src="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML/facebook-output.png" />
+  </body>
+</html>
