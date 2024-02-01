@@ -6,6 +6,8 @@
     <meta charset="utf-8" />
 
     <title> What's in the head? Metadata in HTML </title>
+
+    <link rel="icon" href="../images/almuerzo-cohete.png" type="image/x-icon" />
     
   </head>
 
@@ -165,5 +167,36 @@
     </p>
 
     <img src="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML/facebook-output.png" />
+
+    <h2> Adding custom icons to your site </h2>
+
+    <p>
+      Para enriquecer el diseno de tu pagina puedes agregar referencias a iconos en tus metadatos, el mas comun es favicon,
+      el cual se refiere a "favorite icons" haciendo referencia a los "bookmarks" o "favoritos".
+    </p>
+
+    <p>
+      El humilde favicon existe desde hace muchos anos, usando esto en los metadatos es posible insertar un icono en la
+      pestana y que aparezca en los bookmarks
+    </p>
+
+    <p> Puedes agregar un favicon a tu pagina de la siguiente manera: </p>
+
+    <ol>
+      <li>
+        <p>
+          Guardarla en el mismo directorio que el index con extension .ico, aunque algunas veces tambien se encuentran en
+          .gif o .png
+        </p>
+      </li>
+      <li>
+        <p>
+          Anadir lo siguiente a tu head:
+        </p>
+        <p> &ltlink rel="icon" href="favicon.ico" type="image/x-icon" /&gt </p>
+      </li>
+    </ol>
+
+    
   </body>
 </html>
