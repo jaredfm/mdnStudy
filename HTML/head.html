@@ -197,6 +197,62 @@
       </li>
     </ol>
 
-    
+    <h2> Applying CSS and JavaScript to HTML </h2>
+
+    <p>
+      En la mayoria de los sitios web que usamos actualmente usamos CSS para hacer lucir bien nuestra pagina y JavaScript
+      para darle funcionalidad, como por ejemplo reproductores de video, mapas, juegos y mas. Esto es comunmente aplicado
+      usando los elementos &lt;link&gt; y &lt;script&gt; respectivamente.
+    </p>
+
+    <ul>
+      <li>
+        <p>
+          El elemento &lt;link&gt; siempre va dentro del head de nuestro documento, este toma dos atributos, el primero es
+          rel="stylesheet" que indica que esta es una hoja de estilos y el segundo es href el cual indica la ubicacion de
+          nuestro archivo de estilos.
+        </p>
+
+        <p>
+          &lt;link rel="stylesheet" href="my-css-file.css" /&gt;
+        </p>
+      </li>
+
+      <li>
+        <p>
+          El elemento &lt;script&gt; tambien va dentro del head del documento, este incluye el atirbuto de src, en el cual
+          se especificara la ruta hacia nuestro archivo de JavaScript, luego el segundo atributo es defer, que es
+          basicamente darle la instruccion al navegador de primero terminar de cargar todo el HTML antes de ejecutar el
+          JavaScript para asi evitar problemas.
+        </p>
+
+        <p>
+          &lt;script src="my-js-file.js" defer&gt;&lt;/script&gt;
+        </p>
+
+        <p>
+          NOTA!!: El elemento &lt;script&gt; puede parecer un void element pero no es asi, necesita su etiqueta de cierre
+          ya que tambien puede optar por encerrar su script entro del elemento.
+        </p>
+      </li>
+    </ul>
+
+    <h2> Setting the primary language of the document </h2>
+
+    <p>
+      Para terminar, vale la pena mencionar que puedes y debes configurar el lenguaje de tu pagina, esto se hace
+      agregando el atributo lang al elemento de apertura &lt;html&gt;.
+    </p>
+
+    <p> &lt;html lang="en-US"&gt; ... &lt;/html&gt; </p>
+
+    <p>
+      Esto es muy util por las siguientes razones, la primera es que asi los motores de busqueda puede indexar tu sitio
+      de forma mas eficiente dependiendo del lenguaje de la busqueda, tambien es util para personas que usan los screen
+      readers y que asi puedan tener una correcta pronunciacion. Por ultimo tambien hay que mencionar que puedes crear 
+      secciones de tu documento que usen diferentes lenguajes.
+    </p>
+
+    <p> &lt;p&gt; Japanese example: &lt;span lang="ja"&gt; ご飯が熱い。 &lt;/span&gt;. &lt;p&gt; </p>
   </body>
 </html>
