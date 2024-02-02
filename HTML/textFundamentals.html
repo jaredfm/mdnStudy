@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf=8" />
+
+        <title> HTML text fundamentals </title>
+    </head>
+
+    <body>
+
+        <h1> HTML text fundamentals </h1>
+
+        <p>
+            Uno de los principales trabajos de HTML es darle la estructura a la pagina segun sea la intencion de los
+            desarrolladores.
+        </p>
+
+        <h2> The basic: headings and paragraphs </h2>
+
+        <p> 
+            La mayoria de los textos estructurados constan de encabezados y parrafos para asi hacer mas sencilla la
+            experiencia del usuario. En HTML cada parrafo va encerrado entre el elemento &lt;p&gt;:
+        </p>
+
+        <p> &lt;p&gt; I am a paragraph, oh yes I am &lt;/p&gt; </p>
+
+        <p> Cada encabezado va encerrado entre el elemento de encabezado: </p>
+
+        <p> &lt;p&gt; I am the title of the history &lt;/p&gt; </p>
+
+        <p>
+            Hay varios tipos de headers: h1, h2, h3, h4, h5 y h6. Cada uno de estos se usa para representar diferentes niveles
+            en el documento. h1 representa el titulo principal, h2 los subtitulos, h3 los sub subtitulos y asi sucesivamente.
+        </p>
+
+        <h3> Implementing structural hierarchy </h3>
+
+        <p>
+            Por ejemplo en la siguiente historia &lt;h1&gt; representa el titulo de la historia, &lt;h2&gt; representa el titulo
+            de cada capitulo y &lt;h3&gt; las secciones de cada capitulo.
+        </p>
+
+        <pre>
+            <code>
+                &lt;h1&gt;The Crushing Bore&lt;/h1&gt;
+
+                &lt;p&gt;By Chris Mills&lt;/p&gt;
+
+                &lt;h2&gt;Chapter 1: The dark night&lt;/h2&gt;
+
+                &lt;p&gt;
+                    It was a dark night. Somewhere, an owl hooted. The rain lashed down on the…
+                &lt;/p&gt;
+
+                &lt;h2&gt;Chapter 2: The eternal silence&lt;/h2&gt;
+
+                &lt;p&gt;Our protagonist could not so much as a whisper out of the shadowy figure…&lt;/p&gt;
+
+                &lt;h3&gt;The specter speaks&lt;/h3&gt;
+
+                &lt;p&gt;
+                    Several more hours had passed, when all of a sudden the specter sat bolt
+                    upright and exclaimed, "Please have mercy on my soul!"
+                &lt;/p&gt;
+            </code>
+        </pre>
+
+        <p>
+            Realmente depende de uno mismo que es lo que querramos que signfiquen los elementos, siempre que tengan sentido y
+            jerarquia. Pero a continuacion se presentan algunas de las mejores practicas: 
+        </p>
+
+        <ul>
+            <li>
+                <p>
+                    Preferiblemente solo debe tener un &lt;h1&gt; por pagina, este es el "top level heading" y todos los demas van
+                    debajo de este para respetar la jerarquia.
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    Asegurate de seguir correctamente la jerarquia, es decir, que no puedes usar &lt;h3&gt; para los subtitulos y 
+                    &lt;h2&gt; para los sub subtitulos
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    De los seis niveles de header que existen no deberias usar mas de tres por pagina ya que con muchos niveles de 
+                    texto se vuelve dificil la lectura. En algunas ocasiones es recomendable repartir este contenido en varias
+                    paginas.
+                </p>
+            </li>
+        </ul>
+
+        <h3> Why do we need structure? </h3>
+
+        <p>
+            
+        </p>
+    </body>
+</html>
