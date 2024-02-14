@@ -232,7 +232,183 @@
         <h2> Lists </h2>
 
         <p>
-            
+            Las listas se encuentran en todos lados, desde tu lista de compras de supermercado o la lista de instrucciones que sigues para llegar a tu
+            casa. Hay tres tipos de listas sobre las que nos tenemos que preocupar.
         </p>
+
+        <h3> Unordered </h3>
+
+        <p>
+            Este tipo de listas se usan cuando queremos marcar elementos en los cuales no importa su orden, como por ejemplo la lista de compras.
+            Para crear este tipo de listas se usa el elemento &lt;ul&gt; (unordered list) y cada elemento que se anide dentro de esta lista se colocan dentro de el
+            elemento &lt;li&gt; (list item):
+        </p>
+
+        <pre>
+            <code>
+                &lt;ul&gt;
+                    &lt;li&gt; milk &lt;/li&gt;
+                    
+                    &lt;li&gt; eggs &lt;/li&gt;
+
+                    &lt;li&gt; bread &lt;/li&gt;
+
+                    &lt;li&gt; hummus &lt;/li&gt;
+                &lt;/ul&gt;
+            </code>
+        </pre>
+
+        <h3> Ordered </h3>
+
+        <p>
+            En este tipo de listas el orden si importa, por ejemplo se usan para las direcciones para llegar a un lugar, este tipo de listas se encierran
+            entre el elemento &lt;ol&gt;, e igual con las unordered list cada elemento tiene que estar encerrado en el elemento &lt;li&gt;:
+        </p>
+
+        <pre>
+            <code>
+                &lt;ol&gt;
+                    &lt;li&gt; Drive to the end of the road &lt;li&gt;
+
+                    &lt;li&gt; Turn right &lt;/li&gt;
+
+                    &lt;li&gt; Go straight across the first two roundabouts &lt;/li&gt;
+
+                    &lt;li&gt; Turn left at the third roundabout &lt;/li&gt;
+
+                    &lt;li&gt; The school is on your right, 300 meter up the road &lt;/li&gt;
+                &lt;/ol&gt;
+            </code>
+        </pre>
+
+        <h3> Description </h3>
+
+        <p>
+            Este tipo de listas encierran grupos de terminos y descripciones, es decir pares clave-valor, Estas listas se encierran entre el
+            element &lt;dl&gt;, el termino se encierra entre &lt;dt&gt; y las descripciones entre &lt;dd&gt;. 
+        </p>
+
+        <pre>
+            <code>
+                &lt;dl&gt;
+                    &lt;dt&gt; Albacore Tuna &lt;/dt&gt;
+                    &lt;dd&gt; The albacore is a ver fast swimmer &lt;/dd&gt;
+
+                    &lt;dt&gt; Asian carp &lt;/dt&gt;
+                    &lt;dd&gt; Asian carp can consume 40% of their body weight in food a day &lt;/dd&gt;
+
+                    &lt;dt&gt; Barracuda &lt;/dt&gt;
+                    &lt;dd&gt; Can grow to nearly 2 meters long! &lt;/dd&gt;
+                &lt;/dl&gt;
+            </code>
+        </pre>
+
+        <h3> Nesting lists </h3>
+
+        <p>
+            Es algo aceptable indexar una lista dentro de otra, por ejemplo en esta receta hay un paso que tiene dos sub-pasos:
+        </p>
+
+        <pre>
+            <code>
+                &lt;ol&gt;
+                    &lt;li&gt; Remove the skin of the garlic, and chop coarsely &lt;/li&gt;
+
+                    &lt;li&gt; Remove all the seeds and stalk from the pepper, and chop coarsely &lt;/li&gt;
+
+                    &lt;li&gt; Add all the ingredients into a food processor &lt;/li&gt;
+
+                    &lt;li&gt; Process all the ingredients into a paste &lt;/li&gt;
+
+                    &lt;ul&gt;
+                        &lt;li&gt; If you want a coarse "chunky" hummus, process it for a short time &lt;/li&gt;
+
+                        &lt;li&gt; If you want a smooth hummus, process it for a longer time &lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/ol&gt;
+            </code>
+        </pre>
+
+        <h2> Emphasis and importance </h2>
+
+        <p>
+            En el lenguaje humano solemos enfatizar algunas palabras para cambiar el significado de algun enunciado, o algunas veces marcamos ciertas
+            palabras que consideramos importantes. HTML provee varios elementos semanticos para lograr esto.
+        </p>
+
+        <h3> Emphasis </h3>
+
+        <p>
+            Cuando buscamos agregar enfasis en el lenguaje hablado, enfatizamos algunas palabras para alterar el significado de lo que decimos.
+            De la misma forma en el lenguaje escrito enfatizamos algunas palabras colocandolas en italicas. Por ejemplo estos dos enunciados tienen
+            diferentes significados: 
+        </p>
+
+        <ul>
+            <li> I am glad you were'nt late. </li>
+
+            <li> I am <em>glad</em> you were'nt <em>late</em>. </li>
+        </ul>
+
+        <p>
+            En el primer enunciado se puede entender que la persona en realidad no llego tarde, pero en la segunda cuando se hace enfasis con la palabras
+            suena sarcastica expresando que la persona si llego un poco tarde.
+        </p>
+
+        <p>
+            En HTML usamos el elemento &lt;em&gt; para lograr esto. Para hacerlo mas interesante este elemento tiene un valor semantico que los screen
+            readers pueden cambiar el tono de voz en estas palabras. Los browsers le aplican un estilo de italicas a lo que se encuentre encerrado en el
+            elemento &lt;em&gt; pero no necesariamente es una italica pura, para dar este estilo se usaria el elemento &lt;i&gt; o el elemento
+            &lt;span&gt; y algo de CSS.
+        </p>
+
+        <h3> Strong importance </h3>
+
+        <p>
+            Para enfatizar palabras importantes solemos enfatizar en el lenguaje hablado y ponerlos en negritas en el lenguaje escrito. Por ejemplo:
+        </p>
+
+        <ul>
+            <li> This liquid is <strong>highly toxic</strong>. </li>
+
+            <li> I am counting on you. <strong>Do not</strong> be late! </li>
+        </ul>
+
+        <p>
+            En HTML usamos el elemento &lt;strong&gt; para lograr esto, este elemento tambien cuenta con propiedades semanticas por lo que los screen
+            readers tambien cambiaran su tono de voz al leer estas secciones de texto. Los browsers automaticamente pondran estas secciones en negritas,
+            pero no debemos usar &lt;strong&gt; si queremos un estilo de negritas puro, en ese caso usaremos el elemento &lt;span&gt; y algo de CSS o
+            el elemento &lt;b&gt;.
+        </p>
+
+        <h3> Italic, bold, underline... </h3>
+
+        <p>
+            La situacion con los elementos &lt;i&gt;, &lt;b&gt; y &lt;u&gt; es mas complicada, estos eran muy usados en una epoca en la que CSS 
+            era poco o nada soportado, elementos como estos son llamados <strong>presentational elements</strong> ya que solo cambian la presentacion
+            y no la semantica. Estos ya no son usados ya que en la actualidad la accesibilidad y el SEO es mas importante.
+        </p>
+
+        <p>
+            En HTML5 se redefinieron los roles de estos elementos. Solo es apropiado usar estos tres elementos anteriores cuando no hay una mejor
+            opcion (usualmente si la hay). Considera usar &lt;strong&gt;, &lt;em&gt;, &lt;mark&gt; o &lt;span&gt;. 
+        </p>
+
+        <p> Siempre ten en mente la accesibilidad, por ejemplo el elemento &lt;i&gt; no es muy util para alguien que esta usando un screen reader </p>
+
+        <ul>
+            <li> &lt;i&gt; es usado con palabras foraneas, terminos tecnicos, designacion taxonomica, etc </li>
+
+            <li> &lt;b&gt; es usado con palabras clave, nombres de productos o enunciados principales. </li>
+
+            <li> &lt;u&gt; se usa con nombres propios, errores de ortografia, etc. </li>
+        </ul>
+
+        <p>
+            La gente comunmente asocia el subrayado con los links. En la web es mejor usarlo solo para los links pero si es semanticamente apropiado
+            usarlo en otras partes considera usar CSS para cambiar el estilo predeterminado.
+        </p>
+
+        
     </body>
 </html>
